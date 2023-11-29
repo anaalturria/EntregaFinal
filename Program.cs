@@ -1,9 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using ProjetoFinal.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+
+builder.Services.AddDbContext<Contexto>
+    (options => options.UseSqlServer("Data Source=SP-1491037\\SQLSENAI;Initial Catalog = ProjetoFinal;Integrated Security = True;TrustServerCertificate = True"));
+var app = builder.Build(); 
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
