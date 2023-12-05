@@ -4,12 +4,12 @@ using System.Xml.Linq;
 
 namespace ProjetoFinal.Models
 {
-    [Table("Saida")]
-    public class Saida
+    [Table("SaidaProduto")]
+    public class SaidaProduto
     {
-        [Column("SaidaId")]
+        [Column("Id")]
         [Display(Name = "Código de Saida")]
-        public int SaidaId { get; set; }
+        public int Id { get; set; }
 
         [ForeignKey("ProdutoId")]
         [Display(Name = "Produto")]
@@ -24,13 +24,21 @@ namespace ProjetoFinal.Models
         [Display(Name = "Código da Quantidade de Saida")]
         public int QuantidadeSaida { get; set; }
 
+        [ForeignKey("UsuarioId")]
+        [Display(Name = "Usuario")]
+        public int UsuarioId { get; set; }
+        public Usuario? Usuario { get; set; }
+
         [ForeignKey("ClienteId")]
         [Display(Name = "Cliente")]
         public int ClienteId { get; set; }
         public Cliente? Cliente { get; set; }
 
-        
+        [ForeignKey("TipoSaidaId")]
+        [Display(Name = "Tipo Saida")]
+        public int TipoSaidaId { get; set; }
+        public TipoSaida? TipoSaida { get; set; }
 
-        
+
     }
 }

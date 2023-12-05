@@ -7,13 +7,13 @@ namespace ProjetoFinal.Models
     [Table("Produto")]
     public class Produto
     {
-        [Column("ProdutoId")]
+        [Column("Id")]
         [Display(Name = "Código do Produto")]
-        public int ProdutoId { get; set; }
+        public int Id { get; set; }
 
-        [Column("ProdutoNome")]
+        [Column("NomeProduto")]
         [Display(Name = "Nome do Produto")]
-        public string ProdutoNome { get; set; } = string.Empty;
+        public string NomeProduto { get; set; } = string.Empty;
 
         [Column("QuantidadeEstoque")]
         [Display(Name = "Estoque do Produto")]

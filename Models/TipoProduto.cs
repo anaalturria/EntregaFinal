@@ -7,9 +7,9 @@ namespace ProjetoFinal.Models
     [Table("TipoProduto")]
     public class TipoProduto
     {
-        [Column("TipoProdutoId")]
+        [Column("Id")]
         [Display(Name = "Código do Tipo de Produto")]
-        public int TipoProdutoId { get; set; }
+        public int Id { get; set; }
 
         [Column("TipoProdutoDescricao")]
         [Display(Name = "Descricao do Tipo de Produto")]
