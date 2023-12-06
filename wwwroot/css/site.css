@@ -1,1 +1,11 @@
-
+.Ul{
+    color: white;
+}
+.oioi {
+    color: white !important;
+}
+.menu {
+    background-color: #4b280a;
+    height: 80px;
+    color: white;
+}
